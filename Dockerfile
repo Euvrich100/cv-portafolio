@@ -6,8 +6,8 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Copiar dependencias primero (cache de capas)
-COPY package.json package-lock.json* ./
-RUN npm ci --silent
+COPY package.json ./
+RUN npm install --silent
 
 # Copiar todo el código
 COPY . .
