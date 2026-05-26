@@ -1,0 +1,119 @@
+.academic-timeline {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-bottom: 3rem;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.academic-item {
+  background: var(--bg2);
+  padding: 1.5rem 1.2rem;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.academic-item:hover {
+  background: var(--card);
+}
+
+.academic-item.current {
+  background: var(--card);
+  border-top: 2px solid var(--accent);
+}
+
+.academic-year {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+
+.academic-title {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.academic-sub {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.current-badge {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  color: var(--accent);
+  margin-top: 0.6rem;
+  letter-spacing: 0.12em;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Logros */
+.logros-section {
+  margin-top: 1rem;
+}
+
+.logros-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.logros-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.logro-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1.2rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  transition: border-color 0.2s;
+}
+
+.logro-item:hover {
+  border-color: var(--accent);
+}
+
+.logro-icon {
+  color: var(--accent);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.logro-text {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .academic-timeline {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .academic-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

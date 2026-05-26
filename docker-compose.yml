@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  cv-portafolio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cv-euvrich
+    ports:
+      - "80:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
